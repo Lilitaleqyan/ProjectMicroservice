@@ -14,7 +14,7 @@ public class KafkaConfig {
     NewTopic createTopic() {
        return TopicBuilder.name("payment-created-topic")
                .partitions(3)
-               .replicas(1)
+               .replicas(3)
                .configs(Map.of("min.insync.replicas", "1"))
                .build();
     }
